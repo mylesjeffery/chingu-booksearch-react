@@ -1,0 +1,46 @@
+.form input {
+	height: 36px;
+	width: 300px;
+}
+
+.form button {
+	height: 36px;
+}
+
+.card-list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.card {
+	display: flex;
+	margin-top: 50px;
+	width: 700px;
+	text-align: left;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+	background-color: white;
+}
+@media (max-width: 750px) {
+	.card {
+		width: 500px;
+		margin-top: 25px;
+	}
+}
+.card--info {
+	margin-left: 20px;
+}
+
+.card--title {
+	margin-top: 0;
+}
+
+.card--info a {
+	color: black;
+}
+
+.card--info a:hover {
+	text-decoration: none;
+}
