@@ -10,6 +10,7 @@ function Search() {
 	const [search, setSearch] = useState(true)
 	const [isResults, setIsResults] = useState(true)
 
+	//fetch books data and set results to state
 	const searchBooks = async (e) => {
 		e.preventDefault()
 		const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${API_KEY}`
@@ -29,6 +30,7 @@ function Search() {
 		}
 	}
 
+	//toggle Search enable if no text is entered
 	useEffect(() => {
 		if (query.length > 0) {
 			setSearch(false)
@@ -56,7 +58,7 @@ function Search() {
 				{isResults ? (
 					books.map((book) => <BookCard book={book} key={book.id} />)
 				) : (
-					<p>no results</p>
+					<p>No results! Try something else.</p>
 				)}
 			</div>
 		</div>
